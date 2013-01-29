@@ -1,11 +1,27 @@
 <?php
-$GLOBALS['database_host'] = 'localhost'; //DB Host, prob localhost or 127.0.0.1
-$GLOBALS['database_driver'] = 'mysqli'; //DB connection driver, for mysql 4+ use mysqli
-$GLOBALS['database_name'] = 'phppasswords'; //DB name
-$GLOBALS['database_user_read'] = 'password'; //A standard db user with SELECT only!
-$GLOBALS['database_user_readwrite'] = 'password'; //A db user with SELECT, UPDATE, REPLACE and DELETE permissions, this user is only used when required to help prevent 0 day exploits
-$GLOBALS['database_password'] = 'password'; //A nice random string for the DB password
+setup::Singleton()->save_construct('database', 'Singleton', array(
+		array(	'phptype' 	=> 'mysqli',
+			'backend'	=> 'pdo',
+			'username'	=> 'pass_read',
+			'password'	=> 'fsaaxwgnzyarjkhf',
+			'hostspec'	=> 'localhost',
+			'database'	=> 'phppass1',
+			'prefix'	=> 'tbl_'),
+		true,
+		array(	'phptype' 	=> 'mysqli',
+			'backend'	=> 'pdo',
+			'username'	=> 'pass_writ',
+			'password'	=> 'fsaaxwgnzyarjkhf',
+			'hostspec'	=> 'localhost',
+			'database'	=> 'phppass1',
+			'prefix'	=> 'tbl_'
+		),
+	)
+);
 
-define('MP_SALT', sha1($_SERVER['SCRIPT_NAME'])); //Example key to use for Master Password encryption please change
-
-define('MASTER_KEY_STORE', 'memcache'); //Where to store the master encryption key
+setup::Singleton()->save_construct('session', 'Singleton', array());
+setup::Singleton()->save('allow_rewrite', true);
+setup::Singleton()->save('random_key', sha1('2fe8b327381ba67d770d22fddff246dca71f0b4e'.md5($_SERVER['SCRIPT_NAME']).__FILE__));
+setup::Singleton()->save('server_os', 'unix');
+setup::Singleton()->save('max_sha_hash', 'sha512');
+setup::Singleton()->save('session_handler', 'memcached');

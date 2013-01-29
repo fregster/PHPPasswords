@@ -110,6 +110,9 @@ abstract class Common
 		//We use the globals here as the settings class might not be loaded
 	    if(!Common::rewrite_enabled() && ALLOW_REWRITE) {
 	    	$document_root .= '/index.php';
+		if(substr($_SERVER['SERVER_SOFTWARE'], 0,5) == 'nginx'){
+    			$document_root .= '?ctl=';
+    		}
 	    }
 	
 		return $document_root;

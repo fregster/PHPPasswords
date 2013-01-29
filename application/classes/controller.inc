@@ -28,9 +28,9 @@ class controller
 	}
 	
 	public function run(){
-		$config_file = INC_PATH . '/writable/config.inc';
+		$config_file = SITE_PATH . '/config/config.inc';
 		if(!file_exists($config_file) || !include_once($config_file)){
-			die('Run the installation process');
+			die('Run the installation process '.$config_file);
 		}
 		$this->check_passwords();		
 		request::Singleton();		

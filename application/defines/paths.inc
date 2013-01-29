@@ -31,3 +31,7 @@ if(!defined('DATABASE_LAYER')){
 if(!defined('DIR_SKINS')){
 	define('DIR_SKINS', INC_PATH.DS.'templates'.DS);
 }
+
+if(!defined('DIR_CONFIG')){
+	define('DIR_CONFIG', SITE_PATH.DS.'config'.DS);
+}

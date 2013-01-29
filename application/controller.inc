@@ -13,6 +13,10 @@ require_once INC_PATH.DIRECTORY_SEPARATOR.'application'.DIRECTORY_SEPARATOR.'def
 
 require_once DIR_DEFINES.DS.'settings.inc';
 
+if(file_exists(SITE_PATH.DS.'config'.DS.'settings.inc')){
+	require_once SITE_PATH.DS.'config'.DS.'settings.inc';
+}
+
 require_once DIR_FUNCTIONS.'autoloader.inc';
 
 controller::singleton()->run();

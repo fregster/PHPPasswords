@@ -2,7 +2,7 @@
 <xsl:template name="login-box">
 	<div id="container-login-box">
 		Login Box
-		<form action="./" method="POST">
+		<form action="" method="POST">
 			<span>Username: </span><input name="username" type="text"/><br/>
 			<span>Password: </span><input name="password" type="password"/><br/>
 			<input type="submit" value="Login"/><br/>

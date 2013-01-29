@@ -128,6 +128,11 @@ class database
 				{
 					$dsn_read['prefix'] = $GLOBALS['prefix'];
 				}
+
+				if(!isset($dsn_read['backend']))
+				{
+					$dsn_read['backend'] = 'pdo';
+				}
 				
 				if(isset($GLOBALS['database_mode']) && !isset($dsn_read['database_mode']))
 				{
@@ -156,6 +161,11 @@ class database
 				if(isset($GLOBALS['database_host_write']))
 				{
 					$dsn_write['hostspec'] = $GLOBALS['database_host_write'];
+				}
+
+				if(!isset($dsn_write['backend']))
+				{
+					$dsn_write['backend'] = 'pdo';
 				}
 				
 				if(isset($GLOBALS['database_mode']))

@@ -23,7 +23,10 @@ class user_default extends user {
 		
 		$user_db = database::Singleton()->sql_select_first(NULL, 'tbl_users', 'username', post::variable('username', 'string'));
 		
-		if($user_db == false or !isset($user_db['id']) or (sha1($user_db['id'].sha1($user_db['salt'].post::variable('password')).MP_SALT) != $user_db['password'])){
+		$bcrypt = new bcrypt();
+		$hash = $bcrypt->hash($user_db['id'].$user_db['salt'].post::variable('password').setup::singleton()->load('random_key'));
+		if($user_db == false or !isset($user_db['id']) or 
+		$hash != $user_db['password']){
 			return false;
 		}
 		
