@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template name="results">
+	Results:
+	<xsl:for-each select="/page/search/results/result">
+		<div>
+			<span class="search-title"><xsl:value-of select="./title"/></span> <span class="search-score">(Score: <xsl:value-of select="./score"/>)</span><br/>
+			<span class="search-detail"><xsl:value-of select="./html"/></span>
+		</div>
+	</xsl:for-each>
+	<div>
+		<span class="search-information">Search took <xsl:value-of select="/page/search/results/time"/>seconds and returned results</span>
+	</div>
+</xsl:template>

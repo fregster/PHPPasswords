@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template name="container-search">
+<div id="block-search">
+	<div>
+		Quick Search
+		<xsl:call-template name="quick-search-form"/>
+	</div>
+	<div>
+		Advanced Search
+		<xsl:call-template name="advanced-search-form"/>
+	</div>
+</div>
+</xsl:template>

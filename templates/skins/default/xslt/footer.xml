@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template name="footer">
+	<div id="container-footer">
+		Powered by PHPPasswords
+	</div>
+</xsl:template>

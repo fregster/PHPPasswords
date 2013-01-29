@@ -1,0 +1,11 @@
+<?php
+$GLOBALS['database_host'] = 'localhost'; //DB Host, prob localhost or 127.0.0.1
+$GLOBALS['database_driver'] = 'mysqli'; //DB connection driver, for mysql 4+ use mysqli
+$GLOBALS['database_name'] = 'phppasswords'; //DB name
+$GLOBALS['database_user_read'] = 'password'; //A standard db user with SELECT only!
+$GLOBALS['database_user_readwrite'] = 'password'; //A db user with SELECT, UPDATE, REPLACE and DELETE permissions, this user is only used when required to help prevent 0 day exploits
+$GLOBALS['database_password'] = 'password'; //A nice random string for the DB password
+
+define('MP_SALT', sha1($_SERVER['SCRIPT_NAME'])); //Example key to use for Master Password encryption please change
+
+define('MASTER_KEY_STORE', 'memcache'); //Where to store the master encryption key

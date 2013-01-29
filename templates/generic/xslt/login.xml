@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template name="login-box">
+	<div id="container-login-box">
+		Login Box
+		<form action="./" method="POST">
+			<span>Username: </span><input name="username" type="text"/><br/>
+			<span>Password: </span><input name="password" type="password"/><br/>
+			<input type="submit" value="Login"/><br/>
+		</form>
+	</div>
+</xsl:template>

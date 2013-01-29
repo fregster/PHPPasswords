@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template name="javascript-external">
+
+<xsl:element name="script">
+<xsl:attribute name="type">text/javascript</xsl:attribute>
+<xsl:attribute name="src"><xsl:value-of select="/page/settings/site_folder_js" />	
+<xsl:choose>
+	<xsl:when test="/page/settings/js_use_yui = 1">mt/mt-c-yc.js,mt/mt-m-yc.js</xsl:when>
+	<xsl:otherwise>mt/mt-c.js,mt/mt-m.js</xsl:otherwise>
+</xsl:choose>
+<xsl:if test="/page/settings/js_use_growler = 1">,growl.js</xsl:if>,public.js</xsl:attribute>
+</xsl:element>
+</xsl:template>

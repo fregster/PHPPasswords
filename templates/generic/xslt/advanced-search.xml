@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template name="advanced-search-form">
+	<form action="./" method="get" id="search-adv">
+		Title: <input type="text" name="search-host" /><br/>
+		Service: <input type="text" name="search-url" /><br/>
+		Tags: <input type="text" name="search-detail" /><br/>
+		<input type="submit" value="Search..." /><br/>
+	</form>
+</xsl:template>

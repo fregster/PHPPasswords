@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template name="container-results">
+<div id="block-results">
+Results!
+<xsl:call-template name="results"/>
+</div>
+</xsl:template>

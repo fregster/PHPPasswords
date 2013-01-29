@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template match="/">
+        <html>
+        		<xsl:call-template name="header"/>
+        		<xsl:call-template name="body"/>
+        </html>
+</xsl:template>

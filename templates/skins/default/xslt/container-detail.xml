@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template name="container-detail">
+<div id="block-detail">
+	<xsl:call-template name="detail"/>
+</div>
+</xsl:template>

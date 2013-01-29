@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template name="detail">
+	<xsl:if test="/page/body/password">
+		<table>
+			<tr>
+				<td>Title</td><td><xsl:value-of select="/page/body/password/id"/></td>
+			</tr>
+			<tr>
+				<td>Service</td><td><xsl:value-of select="/page/body/password/id"/></td>
+			</tr>
+			<tr>
+				<td>ID</td><td><xsl:value-of select="/page/body/password/id"/></td>
+			</tr>
+			<tr>
+				<td>Password</td><td><xsl:value-of select="/page/body/password/decrypted"/></td>
+			</tr>
+			<tr>
+				<td>Date last updated</td><td><xsl:value-of select="/page/body/password/date"/></td>
+			</tr>
+		</table>
+	</xsl:if>
+</xsl:template>

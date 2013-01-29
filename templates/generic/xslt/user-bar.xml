@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template name="user-information-bar">
+	<xsl:if test="/page/user/uid">
+		<div id="user-bar">Welcome: <xsl:value-of select="/page/user/friendly_name" /></div>
+	</xsl:if>
+</xsl:template>

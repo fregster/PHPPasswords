@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template name="quick-search-form">
+	<form action="./" method="get" id="search-quick">
+		<input type="text" name="search-quick" /><br/>
+		<input type="submit" value="Search..." /><br/>
+	</form>
+</xsl:template>

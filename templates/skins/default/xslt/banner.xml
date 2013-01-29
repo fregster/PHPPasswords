@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template name="banner">
+<div id="container-banner">
+PHPPasswords
+	<xsl:call-template name="user-information-bar"/>
+</div>
+</xsl:template>

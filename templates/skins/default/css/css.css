@@ -1,0 +1,100 @@
+@CHARSET "ISO-8859-1";
+body {
+	margin:0;
+	padding:0;
+	width:100%;
+	background:#fff;
+	min-width:600px;		/* Minimum width of layout - remove line if not required. The min-width property does not work in old versions of Internet Explorer */
+	font-size:90%;
+}
+
+#container-mask {
+	position:relative;		/* This fixes the IE7 overflow hidden bug and stops the layout jumping out of place */
+	clear:both;
+	float:left;
+	width:100%;				/* width of whole page */
+	overflow:hidden;		/* This chops off any overhanging divs */
+	background:#EEE;		/* Left column background colour */
+}
+
+#container-main{
+	float:left;
+	width:200%;
+	position:relative;
+	left:200px;
+	background:#fff;    	/* Centre column background colour */
+}
+
+#container-detail{
+	float:left;
+	width:250px;
+	position:relative;
+	left:15px;
+	overflow:hidden;
+}
+
+#container-search{
+	float:left;
+	width:170px;
+	position:relative;
+	margin-left:-50%;
+	left:215px;
+	overflow:hidden;
+}
+
+#container-results{
+	float:left;
+	width:170px;
+	position:relative;
+	margin-left:-50%;
+	left:215px;
+	overflow:hidden;
+}
+
+#block-detail{
+
+}
+
+#block-results{
+
+}
+
+#block-search{
+
+}
+
+#container-banner {
+	float:left;
+	width:100%;
+	padding:0;
+	margin:0;
+	border-bottom:1px solid #000;
+}
+
+#colright {
+	float:left;
+	width:100%;
+	position:relative;
+	left:50%;
+	margin-left:-400px;
+	background:#EEE;    	/* Right column background colour */
+}
+#col1wrap {
+	float:right;
+	width:50%;
+	position:relative;
+	right:100%;
+}
+#col1pad {
+	margin:0 15px 0 415px;
+	overflow:hidden;
+}
+
+#footer {
+	clear:both;
+	float:left;
+	width:100%;
+	padding:0;
+	margin:0;
+	border-top:1px solid #000;
+}

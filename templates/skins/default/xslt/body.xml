@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:template name="body">
+<body onload="init();">
+<xsl:call-template name="banner"/>
+<div id="container-mask">
+	<div id="container-main">
+		<xsl:choose>
+			<xsl:when test="/page/user/uid != 0">
+				<div id="colright">
+					<div id="col1wrap">
+						<div id="col1pad">
+							<div id="container-results">
+								<xsl:call-template name="container-results"/>
+							</div>
+						</div>
+					</div>
+					<div id="container-search">
+						<xsl:call-template name="container-search"/>
+					</div>
+					<div id="container-detail">
+						<xsl:call-template name="container-detail"/>
+					</div>
+				</div>
+			</xsl:when>
+		
+			<xsl:otherwise>
+				<xsl:call-template name="login-box"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</div>
+</div>
+<xsl:call-template name="footer"/>
+</body>
+</xsl:template>
